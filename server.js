@@ -31,11 +31,13 @@ var PORT = process.env.PORT || 3000;
 
 app.use(express.static(__dirname));
 
-app.get('/products', function(req, res){
+// #Products moddified
+app.get('/products:products', function(req, res){
   res.send({ products: products });
 });
 
-app.post('/products', function(req, res) {
+// #Client moddified
+app.post('/products/:client', function(req, res) {
   var productName = req.body.name;
   currentID++;
 

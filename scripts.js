@@ -39,8 +39,8 @@ $(function() {
       contentType: 'application/json',
       data: JSON.stringify({ name: createInput.val() }),
       success: function(response) {
-        console.log(response);
-        createInput.val('');
+        console.log(response)
+        createInput.val('')
         $('#get-button').click();
       }
     });
